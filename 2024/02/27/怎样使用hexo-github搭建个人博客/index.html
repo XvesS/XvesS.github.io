@@ -13,13 +13,13 @@
 <meta property="og:site_name" content="Xves的记录本">
 <meta property="og:description" content="零基础小白从零开始搭建属于自己的个人博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_settings.png">
+<meta property="og:image" content="http://example.com/github_settings.png">
 <meta property="article:published_time" content="2024-02-27T06:22:54.000Z">
-<meta property="article:modified_time" content="2024-02-27T08:37:22.051Z">
+<meta property="article:modified_time" content="2024-02-27T08:38:48.361Z">
 <meta property="article:author" content="Xiaowei Shen">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_settings.png">
+<meta name="twitter:image" content="http://example.com/github_settings.png">
   
     <link rel="alternate" href="/atom.xml" title="Xves的记录本" type="application/atom+xml">
   
@@ -111,7 +111,7 @@
 <p>上面两个链接点击进去按照要求下载下来直接安装就好了</p>
 <h3 id="2、和github连接"><a href="#2、和github连接" class="headerlink" title="2、和github连接"></a>2、和github连接</h3><p>我们使用github免费的静态托管仓库让我们的博客可以让其他人进行访问<br>首先打开git bash设置用户名和邮箱</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的用户名&quot;,  </span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>创建SSH连接的密钥</strong><br>win+r输入cmd打开终端，输入ssh-keygen -t rsa -C “你的邮箱”,接着一路回车确认就行，生成的地址就在<code>C:\Users\用户名\.ssh</code>文件夹下<br><strong>连接github</strong><br>使用你的邮箱注册<a target="_blank" rel="noopener" href="https://github.com/">Github</a>账号，找到<code>Settings</code>页面如下：<br><img src="/./%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/github_settings.png" alt="github settings 界面"><br>点击上图中的 <code>New SSH key</code> 添加密钥，<code>title</code>随便填，将<code>C:\Users\用户名\.ssh\id_rsa.pub</code>里的内容复制到<code>key</code>中，最后<code>Add SSH key</code>就完事了<br><strong>连接验证</strong><br>打开Git Bash, 输入<code>ssh -T git@github.com</code> 出现 “Are you sure……”，输入 yes 回车确认，显示 “Hi xxx! You’ve successfully……” 即连接成功。</p>
+<p><strong>创建SSH连接的密钥</strong><br>win+r输入cmd打开终端，输入ssh-keygen -t rsa -C “你的邮箱”,接着一路回车确认就行，生成的地址就在<code>C:\Users\用户名\.ssh</code>文件夹下<br><strong>连接github</strong><br>使用你的邮箱注册<a target="_blank" rel="noopener" href="https://github.com/">Github</a>账号，找到<code>Settings</code>页面如下：<br><img src="/github_settings.png" alt="github settings 界面"><br>点击上图中的 <code>New SSH key</code> 添加密钥，<code>title</code>随便填，将<code>C:\Users\用户名\.ssh\id_rsa.pub</code>里的内容复制到<code>key</code>中，最后<code>Add SSH key</code>就完事了<br><strong>连接验证</strong><br>打开Git Bash, 输入<code>ssh -T git@github.com</code> 出现 “Are you sure……”，输入 yes 回车确认，显示 “Hi xxx! You’ve successfully……” 即连接成功。</p>
 <h3 id="3、创建github-pages仓库"><a href="#3、创建github-pages仓库" class="headerlink" title="3、创建github pages仓库"></a>3、创建github pages仓库</h3><p>GitHub 主页右上角加号 -&gt; New repository：</p>
 <ul>
 <li>Repository name 中输入 用户名.github.io</li>
@@ -135,7 +135,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/27/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="clt43sih50001i8u9e8vi9u8f" data-title="怎样使用hexo+github搭建个人博客" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/27/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="clt4494db00005gu9fdrqh1hs" data-title="怎样使用hexo+github搭建个人博客" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
