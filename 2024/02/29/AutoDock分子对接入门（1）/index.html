@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xvess.github.io/img/avatar.jpg">
 <meta property="article:published_time" content="2024-02-29T07:38:59.000Z">
-<meta property="article:modified_time" content="2024-02-29T09:15:02.737Z">
+<meta property="article:modified_time" content="2024-02-29T09:50:43.191Z">
 <meta property="article:author" content="BioInfoLabs">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-02-29 17:15:02'
+  postUpdate: '2024-02-29 17:50:43'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -153,7 +153,7 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Bio-infoer的入门修炼手册（从入门到入土）"><span class="site-name">Bio-infoer的入门修炼手册（从入门到入土）</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">AutoDock分子对接入门（1）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-29T07:38:59.000Z" title="发表于 2024-02-29 15:38:59">2024-02-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-29T09:15:02.737Z" title="更新于 2024-02-29 17:15:02">2024-02-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="AutoDock分子对接入门（1）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>蛋白分子对接对于解析蛋白质-底物的作用机理必不可少，今天看了一天的AutoDock文档大概弄清楚怎么个使用流程了，现在记录一下。（后边不定期更新）</p>
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Bio-infoer的入门修炼手册（从入门到入土）"><span class="site-name">Bio-infoer的入门修炼手册（从入门到入土）</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">AutoDock分子对接入门（1）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-29T07:38:59.000Z" title="发表于 2024-02-29 15:38:59">2024-02-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-29T09:50:43.191Z" title="更新于 2024-02-29 17:50:43">2024-02-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="AutoDock分子对接入门（1）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>蛋白分子对接对于解析蛋白质-底物的作用机理必不可少，今天看了一天的AutoDock文档大概弄清楚怎么个使用流程了，现在记录一下。（后边不定期更新）</p>
 <span id="more"></span>
 <h3 id="1、什么是AutoDock"><a href="#1、什么是AutoDock" class="headerlink" title="1、什么是AutoDock"></a>1、什么是AutoDock</h3><p>先贴一段官网的描述：</p>
 <blockquote>
@@ -167,11 +167,15 @@
 <p>大致意思就是现在的AutoDock有AutoDock4和AutoDock Vina两个版本，还有一个GPU版本据说可以加快计算速度上百倍（我没试过就不说了）。然后有一个软件叫做AutoDock Tools（ADT）,简而言之就是可以帮助我们生成AutoDock4和AutoDock Vina程序的输入文件并帮助我们分析对接结果的一个软件。</p>
 <h3 id="2、AutoDock-Vina"><a href="#2、AutoDock-Vina" class="headerlink" title="2、AutoDock Vina"></a>2、AutoDock Vina</h3><p>考虑到后边可能会大批量的做分子对接，所以我选择使用Vina,因为它和python绑定，可以和容易的使用python编程操控分子对接（另外据说速度会比AD4快一百倍，但是我没测试过）。<br><strong>2.1 准备工作</strong><br>首先我们需要安装两个软件套装ADFR和Meeko，目的是对输入文件进行处理  </p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://ccsb.scripps.edu/adfr/downloads">ADFR软件下载</a><br>Meeko是一个python包，所以直接<code>pip</code>安装就行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ pip install -U numpy openbabel meeko</span><br></pre></td></tr></table></figure>
-然后安装Vina,直接<code>pip</code>安装<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ pip install -U numpy vina</span><br></pre></td></tr></table></figure>
-<strong>2.2 receptor预处理</strong><br>文档上叫receptor，我的理解就是对接的两个物体中较大的一个，直接就理解为蛋白质就好了。<br>首先我们需要蛋白质的结构文件，一般来说是PDB（可能其他格式的结构文件也行，但是我没试过），然后我们需要把PDB文件处理成Vina能够处理的文件类型，这时候就需要用到<code>prepare_receptor</code>这个命令将PDB文件转换成PDBQT格式的文件，要注意的是，PDB文件里边应该包含所有的氢原子，有很多软件都可以完成这个我就不说了，当然你也可以在命令中添加<code>-A &quot;hydrogens&quot;</code>添加氢原子。还有一个值得注意的就是PDB文件里应该只包含蛋白质的信息，如果有配体、辅因子、离子之类的是不行的，所以要在PDB文件中删除（直接用记事本打开删了就完了）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ prepare_receptor -r example_receptorH.pdb -o example_receptor.pdbqt</span><br></pre></td></tr></table></figure>
-其他可选参数可以输入<code>prepare_receptor -h</code>查看</li>
+<li><a target="_blank" rel="noopener" href="https://ccsb.scripps.edu/adfr/downloads">ADFR软件下载</a></li>
 </ul>
+<p>Meeko是一个python包，所以直接<code>pip</code>安装就行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ pip install -U numpy openbabel meeko</span><br></pre></td></tr></table></figure>
+<p>然后安装Vina,直接<code>pip</code>安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ pip install -U numpy vina</span><br></pre></td></tr></table></figure>
+<p><strong>2.2 receptor预处理</strong><br>文档上叫receptor，我的理解就是对接的两个物体中较大的一个，直接就理解为蛋白质就好了。<br>首先我们需要蛋白质的结构文件，一般来说是PDB（可能其他格式的结构文件也行，但是我没试过），然后我们需要把PDB文件处理成Vina能够处理的文件类型，这时候就需要用到<code>prepare_receptor</code>这个命令将PDB文件转换成PDBQT格式的文件，要注意的是，PDB文件里边应该包含所有的氢原子，有很多软件都可以完成这个我就不说了，当然你也可以在命令中添加<code>-A &quot;hydrogens&quot;</code>添加氢原子。还有一个值得注意的就是PDB文件里应该只包含蛋白质的信息，如果有配体、辅因子、离子之类的是不行的，所以要在PDB文件中删除（直接用记事本打开删了就完了）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ prepare_receptor -r example_receptorH.pdb -o example_receptor.pdbqt</span><br></pre></td></tr></table></figure>
+<p>其他可选参数可以输入<code>prepare_receptor -h</code>查看</p>
 <p><strong>2.3 ligand预处理</strong><br>也是一样，都要求加氢原子，不同的是我们使用<code>mk_prepare_ligand.py</code>命令，然后小分子的格式可以有很多种包括MOL&#x2F;MOL2&#x2F;SDF。然后最好不要使用PDB格式的文件，因为它不包含键连接的信息。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ mk_prepare_ligand.py -i example_ligand.sdf -o example_ligand.pdbqt</span><br></pre></td></tr></table></figure>
 
