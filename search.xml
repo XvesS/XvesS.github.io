@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vscode 连接远程服务器及常用配置</title>
+      <link href="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/"/>
+      <url>/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<p>之前连接远程服务器的时候一直使用的方案是本地浏览器远程连接Jupyter Notebook，用了接近一年的时间感觉还行，但是文件目录不清晰，一旦需要研究大型项目就需要打开多个页面很不方便，想一想还是得需要专门的编辑软件。捣鼓了一下决定使用Vscode + Jupyter Notebook。现在记录一下配置过程。</p><h2 id="1-安装必要的插件"><a href="#1-安装必要的插件" class="headerlink" title="1.安装必要的插件"></a>1.安装必要的插件</h2><h3 id="1-1-Remote-SSH"><a href="#1-1-Remote-SSH" class="headerlink" title="1.1 Remote-SSH"></a>1.1 Remote-SSH</h3><p>在插件市场搜索Remote-SSH，直接安装即可<br><img src="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/remote-ssh.png" alt="remote-ssh"></p><h3 id="1-2-Jupyter"><a href="#1-2-Jupyter" class="headerlink" title="1.2 Jupyter"></a>1.2 Jupyter</h3><p>一样的操作，搜索安装即可<br><img src="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/Jupyter.png" alt="Jupyter Notebook"></p><h2 id="2-连接远程服务器"><a href="#2-连接远程服务器" class="headerlink" title="2.连接远程服务器"></a>2.连接远程服务器</h2><p>首先你得在你的远程服务器上开启Jupyter服务，让它一直挂在后台即可。<br>打开vscode, 点击侧边栏远程连接的标识（下图一），点击上边的‘+’号创建新的连接（下图二）并在弹出的输入框里(下图三)使用ssh命令连接(如 ssh username@ip)<br><img src="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/ssh.png" alt="ssh"><br>然后会提醒了输入服务器的登录密码，登录成功后点击”Open Folder”选择你的工作目录（下图1），选择完成后点击ok（下图2）<br><img src="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/ssh_folder.png" alt="open folder"></p><h2 id="3-选择python解释器"><a href="#3-选择python解释器" class="headerlink" title="3.选择python解释器"></a>3.选择python解释器</h2><h3 id="3-1-py文件的解释器选择"><a href="#3-1-py文件的解释器选择" class="headerlink" title="3.1 py文件的解释器选择"></a>3.1 py文件的解释器选择</h3><p>快捷键 ctrl+shift+p 输入 “Select Interpreter” 选择弹出来的选项回车<br><img src="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/inter_select.png" alt="select interpreter"><br>它会自动搜索你服务器上安装的解释器，选择即可</p><h3 id="3-2-Jupyter的内核选择"><a href="#3-2-Jupyter的内核选择" class="headerlink" title="3.2 Jupyter的内核选择"></a>3.2 Jupyter的内核选择</h3><p>打开jupyter文件，点击右上角的“Select Kernel”<br><img src="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/s_k.png" alt="s_k"><br>选择”Existing Jupyter Server..”<br><img src="/2024/03/15/vscode-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/1.png" alt="1"><br>然后输入服务器地址再选择内核</p><h2 id="4-优化输入体验"><a href="#4-优化输入体验" class="headerlink" title="4.优化输入体验"></a>4.优化输入体验</h2><p>插件市场安装”Pylance”、”Path Intellisense”(注意是为服务器安装)<br>快捷键 ctrl + shif + p,输入 Setting 选择 Open Remote Settings(JSON)打开配置文件，输入下面的配置代码保存即可(将usrname换成自己的系统名)</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;path-intellisense.mappings&quot;: &#123;</span><br><span class="line">        &quot;/&quot;: &quot;/&quot;, </span><br><span class="line">        &quot;~&quot;: &quot;/home/usrname/&quot;,</span><br><span class="line">        &quot;.&quot;: &quot;$&#123;workspaceFolder&#125;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    // terminal 字体大小，默认14</span><br><span class="line">    &quot;terminal.integrated.fontSize&quot;: 15,</span><br><span class="line">    &quot;python.languageServer&quot;:&quot;Pylance&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日常分享;教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AutoDock分子对接入门（1）</title>
       <link href="/2024/02/29/AutoDock%E5%88%86%E5%AD%90%E5%AF%B9%E6%8E%A5%E5%85%A5%E9%97%A8%EF%BC%881%EF%BC%89/"/>
       <url>/2024/02/29/AutoDock%E5%88%86%E5%AD%90%E5%AF%B9%E6%8E%A5%E5%85%A5%E9%97%A8%EF%BC%881%EF%BC%89/</url>
